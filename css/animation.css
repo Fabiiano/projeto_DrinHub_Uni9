@@ -1,0 +1,90 @@
+section:nth-child(odd) {
+  animation: fromLeft .7s backwards;
+}
+
+section:nth-child(even) {
+  animation: fromRight .7s backwards;
+}
+
+@keyframes fromLeft{
+  from {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fromRight{
+  from {
+      opacity: 0;
+      transform: translateX(30px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrossel .slider {
+  height: 300px;
+  width: 500%;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.carrossel .slide {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrossel .slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carrossel .prev,
+.carrossel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.carrossel .prev {
+  left: 0;
+}
+
+.carrossel .next {
+  right: 0;
+}
+
+.carrossel .slider.slide-1 {
+  transform: translateX(-20%);
+}
+
+.carrossel .slider.slide-2 {
+  transform: translateX(-40%);
+}
+
+.carrossel .slider.slide-3 {
+  transform: translateX(-60%);
+}
