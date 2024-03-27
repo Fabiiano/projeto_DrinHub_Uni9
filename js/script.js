@@ -28,5 +28,5 @@ function prevSlide() {
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
 
-// Automatically change slide every 3 seconds
+// Automatically change slide every 5 seconds
 setInterval(nextSlide, 5000);
