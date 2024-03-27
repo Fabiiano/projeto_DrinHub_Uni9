@@ -113,9 +113,9 @@ a:hover {
 
 #about {
   display: flex;
-  align-items: flex-start; /* Alinhar itens verticalmente */
-  justify-content: space-between; /* Distribuir espaço entre os itens */
-  padding: 80px 0; /* Espaçamento interno superior e inferior */
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 80px 0; 
 
   .text{
     text-align:  left;
