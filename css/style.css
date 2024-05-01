@@ -42,10 +42,6 @@ nav {
   align-items: center;
 }
 
-nav li{
-  background-color: transparent;
-}
-
 .logo img {
   display: block;
   margin: 0 auto;
@@ -53,8 +49,8 @@ nav li{
 }
 
 .nav-links {
-  margin-left: 1rem;
   display: flex;
+  margin-left: 5rem;
   list-style: none;
 }
 
@@ -294,6 +290,10 @@ a:hover {
   }
   .nav-links {
     display: none;
+  }
+
+  nav li{
+    background-color: transparent;
   }
   
   .burger {
