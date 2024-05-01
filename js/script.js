@@ -1,6 +1,8 @@
 const carrossel = document.querySelector('.carrossel .slider');
 const prevBtn = document.querySelector('.carrossel .prev');
 const nextBtn = document.querySelector('.carrossel .next');
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
 let currentSlide = 1;
 
 function showSlide(n) {
@@ -30,3 +32,8 @@ nextBtn.addEventListener('click', nextSlide);
 
 // Automatically change slide every 5 seconds
 setInterval(nextSlide, 5000);
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  burger.classList.toggle('active');
+});
