@@ -5,6 +5,7 @@
   --NEON-A-1a: #482f96;
   --bg-color: #01132c;
   --bg-color-burger: #012453; 
+  --bg-color-modal: #0124538f; 
   --NEON-A-3: #0476A6; 
   --NEON-A-4: #05B3D7; 
   --NEON-A-5: #05DBEF; 
@@ -41,13 +42,18 @@ nav {
   align-items: center;
 }
 
+nav li{
+  background-color: transparent;
+}
+
 .logo img {
-  max-width: 90%;
-  margin-right: 15rem ;
-  
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;  
 }
 
 .nav-links {
+  margin-left: 1rem;
   display: flex;
   list-style: none;
 }
@@ -98,6 +104,7 @@ p {
 /* Links */
 a {
   font-weight: bold;
+  background-color:  transparent;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -110,10 +117,14 @@ a:hover {
   display: flex;
   flex-direction: column; 
   align-items: center; 
-  padding: 60px 0;
+  padding: 1rem 0;
   line-height: 1rem; 
 }
 
+.home img{
+  display: block;
+  margin: 0 auto;
+}
 .text {
   margin-bottom: 1vw; 
   text-align: center; 
@@ -121,7 +132,6 @@ a:hover {
 
 .img img {
   max-width: 90%; 
-  height: auto; 
   border-radius: 5%;
   box-shadow: 5px 5px 10px rgb(0, 0, 0);
 }
@@ -144,10 +154,11 @@ a:hover {
 }
 
 #about .img img {
-  max-width: 90vw;
+  max-width: 70vw;
   height: 25rem;
   border-radius: 2rem;
-  margin-bottom: 1rem;
+  display: block;
+  margin: 0 auto;
 }
 
 .carrossel {
@@ -199,6 +210,67 @@ a:hover {
   margin-right: 0;
 }
 
+.galeria-modal{
+  width: 60%;
+  height: 110%;
+  background-color: var(--bg-color-modal);
+  position: absolute;
+  padding: 4%; 
+  visibility: hidden; 
+  z-index: 5;
+}
+
+.galeria-modal span{
+  position: absolute;
+  font-size: 25px;
+  right: 0;
+  cursor: pointer;
+}
+
+.galeria-modal img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.galeria{
+  width: 90%;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 30vh;
+}
+
+.galeria .single-galeria{
+  display: block;
+  margin: 0 auto;
+  border-radius: 5%;
+  margin: 0.5vw;
+  overflow: hidden;
+}
+
+.galeria .single-galeria img{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ cursor: pointer;
+ transition: transform 0.25s ease-in-out
+}
+
+.galeria .single-galeria img:hover{
+  transform: scale(1.1);
+ }
+
+.h-2{
+  grid-row: span 2;
+}
+
+.w-2{
+  grid-column: span 2;
+}
+
 #contact{
   display: flex;
   flex-direction: column;
@@ -206,7 +278,8 @@ a:hover {
   align-items: center;
 }
 
-#contact iframe{  
+#contact iframe{
+  max-width: 100%;  
   border-radius: 1rem;
   box-shadow: 5px 5px 10px rgb(0, 0, 0);
 }
@@ -238,7 +311,7 @@ a:hover {
   }
 
   .burger.active .line1 {
-    transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-50deg) translate(-6px, 5px);
   }
 
   .burger.active .line2 {
@@ -246,7 +319,7 @@ a:hover {
   }
 
   .burger.active .line3 {
-    transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(50deg) translate(-6px, -5px);
   }
 
   .nav-links.active {
@@ -256,12 +329,17 @@ a:hover {
     position: absolute;
     top: 80px;
     background-color: var(--bg-color-burger);
-    width: 90%;
-    text-align: center;
-    
+    width: 70%;
+    text-align: center;    
   }
 
   .nav-links.active li {
-    margin-top: 20px;
+    margin: 10px 0;
   }
+
+  .galeria{
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 15vh;
+  }
+ 
 }

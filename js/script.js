@@ -3,6 +3,8 @@ const prevBtn = document.querySelector('.carrossel .prev');
 const nextBtn = document.querySelector('.carrossel .next');
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
+const galeriaModal = document.querySelector('.galeria-modal');
+const imageModal = document.querySelector('.galeria-modal img');
 let currentSlide = 1;
 
 function showSlide(n) {
@@ -37,3 +39,14 @@ burger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   burger.classList.toggle('active');
 });
+
+function fecharGaleria(){  
+  galeriaModal.style.visibility = "hidden"
+  imageModal.style.transform = "scale(0)";
+}
+
+function abrirGaleria(src){
+  galeriaModal.style.visibility = "visible";
+  imageModal.style.transform = "scale(1)";
+  imageModal.src = src;
+}
