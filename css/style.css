@@ -195,9 +195,7 @@ a:hover {
 }
 
 #events .event-itens img {
-  display: block;
-  margin: 0 auto;
-  max-width: 95vw;
+  max-width: 90vw;
   height: 15rem;
   border-radius: 2rem;
   margin-right: 1rem;
