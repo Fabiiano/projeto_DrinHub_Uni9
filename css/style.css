@@ -195,6 +195,8 @@ a:hover {
 }
 
 #events .event-itens img {
+  display: block;
+  margin: 0 auto;
   max-width: 95vw;
   height: 15rem;
   border-radius: 2rem;
@@ -328,6 +330,7 @@ a:hover {
     align-items: center;
     position: absolute;
     top: 80px;
+    left: 10px;
     background-color: var(--bg-color-burger);
     width: 70%;
     text-align: center;    
