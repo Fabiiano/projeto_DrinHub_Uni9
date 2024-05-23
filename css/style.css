@@ -342,5 +342,9 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 15vh;
   }
+
+  .galeria-modal{
+    width: 90%;
+  }
  
 }
