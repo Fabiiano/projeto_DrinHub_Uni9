@@ -8,13 +8,13 @@ Projeto construído para o projeto de final de semestre.
 
 ### Integrantes:
 
-Alex Sandro Cruz Santana Junior 
+Alex Sandro Cruz Santana Junior  
 RA: 320101401
 
-Fabiano Almeida Tavares da Silva
+Fabiano Almeida Tavares da Silva  
 RA: 321101097
 
-Flávio Sena da silva
+Flávio Sena da silva  
 RA: 321101384
 
 ## 🛠 Tecnologias 🛠
